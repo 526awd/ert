@@ -3,15 +3,25 @@ import threading
 f=open("a//a.txt","a+",encoding="utf8")
 d=open("a//d.txt","a+",encoding="utf8")
 headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'}
-def ty(p:int):
-    for i in range(11000,1000000):
-        e="http://cdn.sinacloud.net/edge.v.iask.com/%s.hlv"%i
+def ty(p:int,o:int):
+    for p in range(p,o):
+        e="http://cdn.sinacloud.net/edge.v.iask.com/%s.hlv"%p
         ad=rt.get(e,headers=headers)
         if ad.status_code==404:
             d.write(e+"\n")
         else:
             print(e+" pass")
             f.write(e+"\n")
+l=0
+kt=[]
+for i in range(0,1000000000,5000):
+    t = threading.Thread(target=work, args=(l,i))
+    l=i
+    kt.append(t)
+for kl in kt:
+    kl.start()
+for kl in kt:
+    kl.join()
 
 f.close()
 d.close()
