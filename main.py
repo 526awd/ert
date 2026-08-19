@@ -15,7 +15,7 @@ def ty(p:int,o:int):
 l=0
 kt=[]
 for i in range(0,1000000000,5000):
-    t = threading.Thread(target=work, args=(l,i))
+    t = threading.Thread(target=ty, args=(l,i))
     l=i
     kt.append(t)
 for kl in kt:
