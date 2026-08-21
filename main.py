@@ -8,7 +8,13 @@ def ty(p:int,o:int):
     for p in range(p,o):
         e="http://cdn.sinacloud.net/edge.v.iask.com/%s.hlv"%p
         time.sleep(0.00001)
-        ad=rt.get(e,headers=headers)
+        try:
+            ad=rt.get(e,headers=headers)
+        except Exception:
+            try:
+                ad=rt.get(e,headers=headers)
+            except Exception:
+                print(e+" unknow")
         if ad.status_code==404:
             d.write(e+"\n")
         else:
