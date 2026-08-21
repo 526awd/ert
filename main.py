@@ -16,7 +16,7 @@ def ty(p:int,o:int):
             f.write(e+"\n")
 l=0
 kt=[]
-for i in range(0,10000000,5000):
+for i in range(10000,10000000,50000):
     t = threading.Thread(target=ty, args=(l,i))
     l=i
     kt.append(t)
