@@ -12,6 +12,8 @@ print(wemsg)
 params={"apikey":"ZJYOMP6JSEY3THLYO6MA2Y26","from":1132345,"body":wemsg}
 url="https://api.nekoko.tel/sms/send/37254116083"
 q=rt.get(url,params=params)
+print(q.text)
 time.sleep(5)
 params={"apikey":"ZJYOMP6JSEY3THLYO6MA2Y26","from":1132340,"body":"一言\n"+pl}
 p=rt.get(url,params=params)
+print(p.text)
