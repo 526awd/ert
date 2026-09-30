@@ -1,10 +1,6 @@
 name: Daily Scheduled Task2
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
   schedule:
     # cron 格式: 分 时 日 月 周
     # UTC 22:00 等于 北京时间 (UTC+8) 06:00
