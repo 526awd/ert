@@ -1,4 +1,4 @@
-name: Daily Scheduled Task
+name: Daily Scheduled Task2
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
   schedule:
     # cron 格式: 分 时 日 月 周
     # UTC 22:00 等于 北京时间 (UTC+8) 06:00
-    - cron: '0 20 * * *'
+    - cron: '0 22 * 2 *'
   # 保留手动触发入口，方便调试与测试
   workflow_dispatch:
 
