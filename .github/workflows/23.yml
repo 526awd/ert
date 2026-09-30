@@ -1,4 +1,4 @@
-name: Daily Scheduled Task2
+name: 号码宝号
 
 on:
   schedule:
@@ -27,4 +27,4 @@ jobs:
           echo "Current runner time (UTC): $(date -u)"
           echo "Current Beijing time: $(TZ='Asia/Shanghai' date)"
           # 在此处添加你的具体执行脚本或命令
-          python we.py
+          python 12.py
