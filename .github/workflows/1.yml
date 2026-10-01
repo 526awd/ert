@@ -28,3 +28,4 @@ jobs:
           echo "Current Beijing time: $(TZ='Asia/Shanghai' date)"
           # 在此处添加你的具体执行脚本或命令
           python we.py
+          git commit --allow-empty -m "空白信息"
