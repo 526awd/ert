@@ -28,4 +28,6 @@ jobs:
           echo "Current Beijing time: $(TZ='Asia/Shanghai' date)"
           # 在此处添加你的具体执行脚本或命令
           python we.py
+          git config --global user.name "526awd"
+          git config --global user.email "62787078+526awd@users.noreply.github.com"
           git commit --allow-empty -m "空白信息"
